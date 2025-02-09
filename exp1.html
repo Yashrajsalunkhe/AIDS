@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 1 - Basic HTML Tags</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        main {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 900px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            text-align: center;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        pre {
+            background-color: #e8e8e8;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="hi">WEB TECHNOLOGY LAB</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="experiments.html">Experiments</a></li>
+                <li><a href="labwork.html">Lab Work</a></li>
+                <li><a href="#" onclick="logout()" class="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>Experiment No: 1</h1>
+        <p><strong>Title:</strong> To Implement Different types of basic HTML Tag using HTML5 version.</p>
+        <h2>Aim:</h2>
+        <p>To Implement Different types of basic HTML Tag using HTML5 version.</p>
+        <h2>Theory:</h2>
+        <p>There is a list of newly included tags in HTML 5. These HTML 5 tags (elements) provide a better document structure.</p>
+        
+        <h3>List of HTML 5 Tags</h3>
+        <ul>
+            <li>&lt;article&gt; - Defines an independent piece of content.</li>
+            <li>&lt;aside&gt; - Specifies content slightly related to the main content.</li>
+            <li>&lt;audio&gt; - Plays audio files.</li>
+            <li>&lt;canvas&gt; - Used to draw graphics.</li>
+            <li>&lt;footer&gt; - Defines a footer section.</li>
+            <li>&lt;header&gt; - Defines a header section.</li>
+            <li>&lt;main&gt; - Defines the main content.</li>
+            <li>&lt;mark&gt; - Highlights text.</li>
+            <li>&lt;nav&gt; - Defines navigation links.</li>
+            <li>&lt;section&gt; - Defines a standalone section.</li>
+            <li>&lt;summary&gt; - Summary for a &lt;details&gt; element.</li>
+            <li>&lt;video&gt; - Plays video files.</li>
+        </ul>
+        
+        <h2>Code Examples:</h2>
+        <h3>1. &lt;article&gt; Tag</h3>
+        <pre>
+        &lt;article&gt;
+            &lt;h2&gt;EDUCBA&lt;/h2&gt;
+            &lt;p&gt;EDUCBA is a leading global provider of skill-based education.&lt;/p&gt;
+        &lt;/article&gt;
+        </pre>
+        
+        <h3>2. &lt;figure&gt; Tag</h3>
+        <pre>
+        &lt;figure&gt;
+            &lt;img src="educba.png" alt="EDUCBA Logo"/&gt;
+        &lt;/figure&gt;
+        </pre>
+        
+        <h3>3. &lt;header&gt; Tag</h3>
+        <pre>
+        &lt;header&gt;
+            &lt;h1&gt;Header One&lt;/h1&gt;
+            &lt;h2&gt;Header Two&lt;/h2&gt;
+        &lt;/header&gt;
+        </pre>
+        
+        <h3>4. &lt;footer&gt; Tag</h3>
+        <pre>
+        &lt;footer&gt;
+            &lt;p&gt;Copyright © 2025&lt;/p&gt;
+        &lt;/footer&gt;
+        </pre>
+        
+        <h3>5. &lt;nav&gt; Tag</h3>
+        <pre>
+        &lt;nav&gt;
+            &lt;a href="#"&gt;HTML&lt;/a&gt; |
+            &lt;a href="#"&gt;CSS&lt;/a&gt; |
+            &lt;a href="#"&gt;JavaScript&lt;/a&gt;
+        &lt;/nav&gt;
+        </pre>
+        
+        <h2>Result:</h2>
+        <p>The programs to implement the basic HTML tags using HTML5 version were executed successfully.</p>
+    </main>
+    
+    <footer>
+        <div class="contact">
+            <h3>Contact Me</h3>
+            <p>Email: yashrajsalunkhe@example.com</p>
+            <p>Phone: +91 98765 43210</p>
+            <p>Follow me on <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
+            <div class="message-box">
+                <h4>Send me a message</h4>
+                <form action="https://formspree.io/f/xvgzqdkg" method="POST">
+                    <label for="email">Your email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Your message:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

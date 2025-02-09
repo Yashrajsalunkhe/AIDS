@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Login - Lab Work</title>
+</head>
+<body>
+    <article>
+        <center>
+            <h1 class="hi">WEB TECHNOLOGY LAB</h1>
+            <p class="y">
+                <a href="https://www.w3schools.com/html/"> - HTML</a>
+                <a href="https://www.w3schools.com/css/">- CSS</a>
+                <a href="https://www.w3schools.com/js/">- JAVASCRIPT</a>
+                <a href="https://www.w3schools.com/php/">- PHP</a>
+                <a href="https://www.w3schools.com/nodejs/">- NODEJS</a>
+                <a href="https://www.w3schools.com/react/">- REACT</a>
+                <a href="https://www.w3schools.com/typescript/">- TypeScript</a>
+            </p>
+        </center>
+    </article>
+    <div>
+        <center>
+            <div class="login-container">
+                <h1>Login</h1>
+                <form onsubmit="return validateLogin()">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="login-btn">Login</button>
+                </form>
+                <p id="error-message" class="error-message"></p>
+                <div class="forgot-password">
+                    <a href="#">Forgot your password?</a>
+                </div>
+            </div>
+        </center>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Home - Lab Work</title>
+</head>
+<body>
+    <header>
+        <center>
+        <h1 class="hi">WEB TECHNOLOGY LAB</h1>
+    </center>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="experiments.html">Experiments</a></li>
+                <li><a href="labwork.html">Lab Work</a></li>
+                <li><a href="#" onclick="logout()" class="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <h2>Welcome, Yashraj Salunkhe!</h2>
+            <p>Explore your Web Technology Lab Experiments and Assignments here.</p>
+        </section>
+
+        <section class="content">
+            <h3>Lab Experiments</h3>
+            <div class="experiment-container">
+                <div class="experiment-box"><a href="exp1.html">Experiment 1: Programs based on newly introduced elements of HTML5</a></div>
+                <div class="experiment-box"><a href="exp2.html">Experiment 2: Programs based on Typography and background properties of CSS3, animation effect by using the transition feature of CSS</a></div>
+                <div class="experiment-box"><a href="exp3.html">Experiment 3: Programs based on JavaScript operators, functions and objects</a></div>
+                <div class="experiment-box"><a href="exp4.html">Experiment 4: Programs based on Jquery selectors, Jquery events</a></div>
+                <div class="experiment-box"><a href="exp5.html">Experiment 5: Program to demonstrate concept of DTD and its types</a></div>
+                <div class="experiment-box"><a href="exp6.html">Experiment 6: XSLT styles-sheet to convert XML document to HTML</a></div>
+                <div class="experiment-box"><a href="exp7.html">Experiment 7: Program to implement PHP variables, Expression, arrays, control structure</a></div>
+                <div class="experiment-box"><a href="exp8.html">Experiment 8: Design a web form and validate it using PHP using regular expressions</a></div>
+                <div class="experiment-box"><a href="exp9.html">Experiment 9: Design a web page to perform CRUD operations on MySQL database using PHP</a></div>
+                <div class="experiment-box"><a href="exp10.html">Experiment 10: Write a program to manage session in PHP</a></div>
+                <div class="experiment-box"><a href="exp11.html">Experiment 11: Installation of CMS and designing web pages using CMS</a></div>
+                <div class="experiment-box"><a href="exp12.html">Experiment 12: Micro project/CMS theming and plugins</a></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contact">
+            <h3>Contact Me</h3>
+            <p>Email: yashrajsalunkhe@example.com</p>
+            <p>Phone: +91 98765 43210</p>
+            <p>Follow me on <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
+            <div class="message-box">
+                <h4>Send me a message</h4>
+                <form action="https://formspree.io/f/xvgzqdkg" method="POST">
+                    <label for="email">Your email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Your message:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function logout() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>

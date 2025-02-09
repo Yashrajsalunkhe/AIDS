@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Experiments</title>
+</head>
+<body>
+    <header>
+        <center>
+            <h1 class="hi">WEB TECHNOLOGY LAB</h1>
+        </center>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="experiments.html">Experiments</a></li>
+                <li><a href="labwork.html">Lab Work</a></li>
+                <li><a href="#" onclick="logout()">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="experiment-list">
+        <center>
+            <h2>Experiment List</h2>
+        </center>
+            <div class="experiments-container">
+                <script>
+                    const experiments = [
+                        "Programs based on newly introduced elements of HTML5.",
+                        "Programs based on Typography and background properties of CSS3, animation effect by using the transition feature of CSS.",
+                        "Programs based on JavaScript operators, functions and objects.",
+                        "Programs based on Jquery selectors, Jquery events.",
+                        "Program to demonstrate concept of DTD and its types.",
+                        "XSLT styles-sheet to convert XML document to HTML.",
+                        "Program to implement PHP variables, Expression, arrays, control structure.",
+                        "Design a web form and validate it using PHP using regular expressions.",
+                        "Design a web page to perform CRUD operations on MySQL database using PHP.",
+                        "Write a program to manage session in PHP.",
+                        "Installation of CMS and designing web pages using CMS.",
+                        "Micro project/CMS theming and plugins."
+                    ];
+                    
+                    experiments.forEach((exp, index) => {
+                        document.write(`<div class='experiment-box'><a href='experiment.html?exp=${index + 1}'>Experiment ${index + 1}</a><p>${exp}</p></div>`);
+                    });
+                </script>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="contact">
+            <h3>Contact Me</h3>
+            <p>Email: yashrajsalunkhe@example.com</p>
+            <p>Phone: +91 98765 43210</p>
+            <p>Follow me on <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
+        </div>
+    </footer>
+    <script>
+        function logout() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 5 - DTD and its Types</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        main {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 900px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="hi">WEB TECHNOLOGY LAB</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="experiments.html">Experiments</a></li>
+                <li><a href="labwork.html">Lab Work</a></li>
+                <li><a href="#" onclick="logout()" class="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Experiment 5</h1>
+            <h2>Program to Demonstrate Concept of DTD and Its Types</h2>
+        </section>
+        <section>
+            <h3>Objective</h3>
+            <p>To provide the fundamentals of a valid XML document.</p>
+        </section>
+        <section>
+            <h3>Theory</h3>
+            <h4>Introduction to XML</h4>
+            <p>XML (Extensible Markup Language) is a text-based markup language derived from SGML. It is used to store and organize data rather than presenting it like HTML.</p>
+            <ul>
+                <li><strong>XML is extensible:</strong> You can create your own tags.</li>
+                <li><strong>XML carries data, not presentation:</strong> It stores data independently of how it is displayed.</li>
+                <li><strong>XML is a public standard:</strong> Developed by W3C, it is an open standard.</li>
+            </ul>
+        </section>
+        <section>
+            <h3>XML Example</h3>
+            <pre>
+&lt;?xml version="1.0"?&gt;
+&lt;contact-info&gt;
+    &lt;name&gt;Tanmay Patil&lt;/name&gt;
+    &lt;company&gt;TutorialsPoint&lt;/company&gt;
+    &lt;phone&gt;(011) 123-4567&lt;/phone&gt;
+&lt;/contact-info&gt;
+            </pre>
+        </section>
+        <section>
+            <h3>XML Validation</h3>
+            <p>XML validation ensures that an XML document conforms to a specific structure using a Document Type Declaration (DTD).</p>
+            <h4>Well-formed XML</h4>
+            <p>An XML document is well-formed if it adheres to syntax rules, such as:</p>
+            <ul>
+                <li>Each opening tag has a closing tag.</li>
+                <li>Tags are properly nested.</li>
+                <li>Only one root element exists.</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Valid XML</h3>
+            <p>If an XML document has an associated DTD and conforms to it, it is considered valid.</p>
+            <h4>Internal DTD</h4>
+            <pre>
+&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
+&lt;!DOCTYPE address [
+    &lt;!ELEMENT address (name,company,phone)&gt;
+    &lt;!ELEMENT name (#PCDATA)&gt;
+    &lt;!ELEMENT company (#PCDATA)&gt;
+    &lt;!ELEMENT phone (#PCDATA)&gt;
+]&gt;
+&lt;address&gt;
+    &lt;name&gt;Tanmay Patil&lt;/name&gt;
+    &lt;company&gt;TutorialsPoint&lt;/company&gt;
+    &lt;phone&gt;(011) 123-4567&lt;/phone&gt;
+&lt;/address&gt;
+            </pre>
+            <h4>External DTD</h4>
+            <p>External DTD is referenced using a SYSTEM attribute.</p>
+            <pre>
+&lt;?xml version="1.0" encoding="UTF-8" standalone="no"?&gt;
+&lt;!DOCTYPE address SYSTEM "address.dtd"&gt;
+&lt;address&gt;
+    &lt;name&gt;Tanmay Patil&lt;/name&gt;
+    &lt;company&gt;TutorialsPoint&lt;/company&gt;
+    &lt;phone&gt;(011) 123-4567&lt;/phone&gt;
+&lt;/address&gt;
+            </pre>
+        </section>
+        <section>
+            <h3>Conclusion</h3>
+            <p>We have studied XML documents and their validation types using DTD.</p>
+        </section>
+    </main>
+    <footer>
+        <div class="contact">
+            <h3>Contact Me</h3>
+            <p>Email: yashrajsalunkhe@example.com</p>
+            <p>Phone: +91 98765 43210</p>
+            <p>Follow me on <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
+        </div>
+    </footer>
+</body>
+</html>

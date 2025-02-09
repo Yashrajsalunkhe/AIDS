@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 3 - JavaScript Operators</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        main {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 900px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            text-align: center;
+        }
+        pre {
+            background-color: #e8e8e8;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="hi">WEB TECHNOLOGY LAB</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="experiments.html">Experiments</a></li>
+                <li><a href="labwork.html">Lab Work</a></li>
+                <li><a href="#" onclick="logout()" class="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>Experiment No: 3</h1>
+        <p><strong>Title:</strong> JavaScript Operators</p>
+        <h2>Aim:</h2>
+        <p>Understanding JavaScript Operators like Arithmetic, Assignment, and Ternary Operators.</p>
+        
+        <h2>Examples:</h2>
+        
+        <h3>1. Assignment Operator (=)</h3>
+        <pre>
+        &lt;script&gt;
+        let x = 5;
+        let y = 2;
+        let z = x + y;
+        document.getElementById("demo").innerHTML = "The sum of x + y is: " + z;
+        &lt;/script&gt;
+        </pre>
+        
+        <h3>2. Addition Operator (+)</h3>
+        <pre>
+        &lt;script&gt;
+        let x = 5;
+        let y = 2;
+        let z = x + y;
+        document.getElementById("demo").innerHTML = z;
+        &lt;/script&gt;
+        </pre>
+        
+        <h3>3. Multiplication Operator (*)</h3>
+        <pre>
+        &lt;script&gt;
+        let x = 5;
+        let y = 2;
+        let z = x * y;
+        document.getElementById("demo").innerHTML = z;
+        &lt;/script&gt;
+        </pre>
+        
+        <h3>4. JavaScript Functions for Arithmetic</h3>
+        <pre>
+        &lt;script&gt;
+        function mul(p1, p2) { return p1 * p2; }
+        function add(p1, p2) { return p1 + p2; }
+        function sub(p1, p2) { return p1 - p2; }
+        function div(p1, p2) { return p1 / p2; }
+        let result = add(4, 3);
+        document.getElementById("demo").innerHTML = result;
+        &lt;/script&gt;
+        </pre>
+        
+        <h3>5. Ternary Operator</h3>
+        <pre>
+        &lt;script&gt;
+        function myFunction() {
+            let age = document.getElementById("age").value;
+            let voteable = (age < 18) ? "Too young" : "Old enough";
+            document.getElementById("demo").innerHTML = voteable + " to vote.";
+        }
+        &lt;/script&gt;
+        </pre>
+        
+        <h3>6. External JavaScript File Example</h3>
+        <pre>
+        &lt;script src="p3.js"&gt;&lt;/script&gt;
+        </pre>
+        
+    </main>
+    
+    <footer>
+        <div class="contact">
+            <h3>Contact Me</h3>
+            <p>Email: yashrajsalunkhe@example.com</p>
+            <p>Phone: +91 98765 43210</p>
+            <p>Follow me on <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
+            <div class="message-box">
+                <h4>Send me a message</h4>
+                <form action="https://formspree.io/f/xvgzqdkg" method="POST">
+                    <label for="email">Your email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Your message:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

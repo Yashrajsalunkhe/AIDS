@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Experiment</title>
+</head>
+<body>
+    <header>
+        <h1 class="hi">WEB TECHNOLOGY LAB</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="experiments.html">Experiments</a></li>
+                <li><a href="labwork.html">Lab Work</a></li>
+                <li><a href="#" onclick="logout()">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="experiment-details">
+            <h2 id="exp-title">Loading...</h2>
+            <p id="exp-description">Please wait while we load the experiment details.</p>
+        </section>
+    </main>
+    <footer>
+        <div class="contact">
+            <h3>Contact Me</h3>
+            <p>Email: yashrajsalunkhe@example.com</p>
+            <p>Phone: +91 98765 43210</p>
+            <p>Follow me on <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
+        </div>
+    </footer>
+    <script>
+        console.log("JavaScript Loaded!"); // Check if script is running
+
+        function getExperimentDetails() {
+            const params = new URLSearchParams(window.location.search);
+            const expNumber = params.get("exp");
+
+            console.log("Experiment Number:", expNumber); // Debugging output
+
+            const experiments = {
+                "1": { title: "Experiment 1", description: "Programs based on newly introduced elements of HTML5." },
+                "2": { title: "Experiment 2", description: "Programs based on CSS3 properties and animations." },
+                "3": { title: "Experiment 3", description: "Programs based on JavaScript operators, functions, and objects." },
+                "4": { title: "Experiment 4", description: "Programs based on jQuery selectors and events." },
+                "5": { title: "Experiment 5", description: "Demonstrating DTD concepts." },
+                "6": { title: "Experiment 6", description: "XSLT to convert XML to HTML." },
+                "7": { title: "Experiment 7", description: "PHP variables, expressions, and arrays." },
+                "8": { title: "Experiment 8", description: "Web form validation using PHP." },
+                "9": { title: "Experiment 9", description: "CRUD operations with PHP and MySQL." },
+                "10": { title: "Experiment 10", description: "Managing sessions in PHP." },
+                "11": { title: "Experiment 11", description: "Installing and using CMS." },
+                "12": { title: "Experiment 12", description: "CMS theming and plugins." }
+            };
+
+            if (experiments[expNumber]) {
+                document.getElementById("exp-title").innerText = experiments[expNumber].title;
+                document.getElementById("exp-description").innerText = experiments[expNumber].description;
+            } else {
+                document.getElementById("exp-title").innerText = "Experiment Not Found";
+                document.getElementById("exp-description").innerText = "Invalid experiment selection.";
+            }
+        }
+
+        window.onload = getExperimentDetails;
+
+    </script>
+</body>
+</html>

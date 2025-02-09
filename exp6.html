@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 6 - XSLT Transformation</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        main {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 900px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="hi">WEB TECHNOLOGY LAB</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="experiments.html">Experiments</a></li>
+                <li><a href="labwork.html">Lab Work</a></li>
+                <li><a href="#" onclick="logout()" class="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Experiment 6</h1>
+            <h2>Write XSLT Style-Sheet to Convert XML Document to HTML using XSL Template</h2>
+        </section>
+        <section>
+            <h3>Objective</h3>
+            <p>To provide students in-depth theoretical base of web programming using XML.</p>
+        </section>
+        <section>
+            <h3>Theory</h3>
+            <p>XSLT (Extensible Stylesheet Language Transformations) is used to transform XML documents into other formats like HTML.</p>
+            <ul>
+                <li><strong>XSLT stands for XSL Transformations.</strong></li>
+                <li><strong>XSLT transforms an XML document into another format.</strong></li>
+                <li><strong>XSLT uses XPath to navigate XML documents.</strong></li>
+            </ul>
+            <p>XSLT allows adding/removing elements, sorting, and conditional transformations.</p>
+        </section>
+        <section>
+            <h3>Example</h3>
+            <h4>XML Document</h4>
+            <pre>
+&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet type="text/xsl" href="p1.xsl"?&gt;
+&lt;class&gt;
+    &lt;student roll="1"&gt;
+        &lt;name&gt;Ken&lt;/name&gt;
+        &lt;age&gt;26&lt;/age&gt;
+        &lt;address&gt;Pune&lt;/address&gt;
+        &lt;subject&gt;Maths&lt;/subject&gt;
+    &lt;/student&gt;
+    &lt;student roll="2"&gt;
+        &lt;name&gt;Boris&lt;/name&gt;
+        &lt;age&gt;23&lt;/age&gt;
+        &lt;address&gt;Kothrud&lt;/address&gt;
+    &lt;/student&gt;
+&lt;/class&gt;
+            </pre>
+            <h4>XSLT Stylesheet</h4>
+            <pre>
+&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;
+&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
+    &lt;xsl:template match="/"&gt;
+        &lt;xsl:for-each select="class"&gt;
+            &lt;xsl:apply-templates select="student" /&gt;
+        &lt;/xsl:for-each&gt;
+    &lt;/xsl:template&gt;
+    &lt;xsl:template match="student"&gt;
+        &lt;p&gt;Roll: &lt;xsl:value-of select="@roll" /&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;b&gt;Name: &lt;xsl:value-of select="name" /&gt;&lt;/b&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;i&gt;Age: &lt;xsl:value-of select="age" /&gt;&lt;/i&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;u&gt;Subject: &lt;xsl:value-of select="subject" /&gt;&lt;/u&gt;&lt;/p&gt;
+    &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;
+            </pre>
+        </section>
+        <section>
+            <h3>Conclusion</h3>
+            <p>XSLT is a transformation language that converts XML documents into HTML.</p>
+        </section>
+    </main>
+    <footer>
+        <div class="contact">
+            <h3>Contact Me</h3>
+            <p>Email: yashrajsalunkhe@example.com</p>
+            <p>Phone: +91 98765 43210</p>
+            <p>Follow me on <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
+        </div>
+    </footer>
+</body>
+</html>
